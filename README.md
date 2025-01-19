@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Echo Meet
 
-## Getting Started
+## Overview
+Echo Meet is a fully responsive web application designed for seamless online collaboration. Built using cutting-edge technologies, Echo Meet enables users to connect effortlessly through real-time video calls, ensuring a smooth and productive experience for professionals, teams, and individuals alike.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+- **Video Calling:** Real-time communication powered by Stream.io APIs.
+- **Authentication:** Secure and efficient user authentication with Clerk.
+- **Responsive Design:** Optimized for all devices, ensuring a great user experience on desktops, tablets, and mobile phones.
+- **Modern UI Components:** Styled using ShadCN for a polished and consistent design.
+- **Built with Next.js:** Leveraging the latest features of Next.js for server-side rendering and static site generation.
+
+---
+
+## Technologies Used
+- **Next.js**: Framework for building the frontend and backend of the application.
+- **ShadCN**: For elegant and customizable UI components.
+- **Stream.io**: APIs for real-time video calling and interactions.
+- **Clerk**: Authentication and user management.
+- **HTML, CSS, JavaScript/TypeScript**: Core web technologies.
+
+---
+
+## Installation and Setup
+
+### Prerequisites
+Ensure you have the following installed on your system:
+- **Node.js** (LTS version recommended)
+- **npm** or **yarn** (package manager)
+
+### Steps
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/sandipghosh0312/echomeet.git
+   cd echo-meet
+   ```
+
+2. **Install Dependencies:**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Set Up Environment Variables:**
+   Create a `.env.local` file in the root directory and add the following variables:
+   ```env
+   NEXT_PUBLIC_STREAM_API_KEY=<your-stream-api-key>
+   NEXT_PUBLIC_CLERK_FRONTEND_API=<your-clerk-frontend-api>
+   CLERK_API_KEY=<your-clerk-api-key>
+   ```
+
+4. **Run the Development Server:**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+   Open your browser and navigate to `http://localhost:3000` to view the application.
+
+---
+
+## Folder Structure
+```
+.
+├── public           # Static assets like images, fonts, etc.
+├── src
+│   ├── components   # Reusable UI components
+│   ├── pages        # Next.js pages (route definitions)
+│   ├── styles       # Global and component-specific styles
+│   ├── utils        # Utility functions
+│   └── hooks        # Custom React hooks
+├── .env.local       # Environment variables
+├── package.json     # Project metadata and dependencies
+└── README.md        # Project documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
+1. **Sign Up / Log In:** Authenticate using Clerk’s secure login system.
+2. **Start a Call:** Initiate a video call with a single click, leveraging Stream.io’s APIs.
+3. **Collaborate:** Share ideas and connect seamlessly on any device.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Acknowledgments
+Special thanks to [JS Mastery](https://github.com/adrianhajdin) for his amazing tutorial and guidance, which inspired and aided the development of this project.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
