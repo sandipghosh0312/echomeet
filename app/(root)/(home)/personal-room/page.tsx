@@ -20,7 +20,7 @@ const Table = ({ title, description }: { title: string; description: string; }) 
 const PersonalRoom = () => {
   const { user, isLoaded: isUserLoaded } = useUser();
   const meetingId = user?.id;
-  const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${meetingId}?/personal=true`;
+  const meetingLink = `echomeet-six.vercel.app/meeting/${meetingId}?/personal=true`;
   const { toast } = useToast();
   const client = useStreamVideoClient();
   const { calls } = useGetCallById(meetingId || "");
